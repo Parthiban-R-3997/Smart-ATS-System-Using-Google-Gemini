@@ -16,7 +16,7 @@ This Streamlit web application serves as a Smart ATS (Applicant Tracking System)
 
 ## Screenshots
 
-![Screenshot 1](/D:/Data_Science/Python_DB_API_ML_DL_NLP_CV Lecture and Projects/iNeuron Lectures/Krish Naik Youtube Videos Notes/Google Gemini Series/github_screenshots/ats_1.jpg)
+![Screenshot 1](https://photos.fife.usercontent.google.com/pw/AP1GczMp0KGhnZFnC6_QBIZyrB0nZckBQBy2Jlrl_3jb53fEpOU0ATtvqzDVyw=w1715-h879-s-no-gm?authuser=0)
 
 
 
