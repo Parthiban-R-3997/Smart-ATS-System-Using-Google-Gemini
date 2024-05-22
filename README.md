@@ -3,7 +3,7 @@
 This Streamlit web application serves as a Smart ATS (Applicant Tracking System), utilizing Google's Gemini Pro AI model to evaluate resumes against job descriptions. By harnessing the power of AI, it streamlines the hiring process and enhances HR efficiency.
 
 ## Deployed Link
-The Smart ATS System is deployed and available at: [Smart ATS System](https://huggingface.co/spaces/Parthiban97/ATS_Smart_System)
+The Smart ATS System is Deployed And Available [Here](https://huggingface.co/spaces/Parthiban97/ATS_Smart_System)
 
 ## Features & Impact
 
