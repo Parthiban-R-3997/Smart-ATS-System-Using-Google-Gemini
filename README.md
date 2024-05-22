@@ -16,7 +16,7 @@ This Streamlit web application serves as a Smart ATS (Applicant Tracking System)
 
 ## Screenshots
 
-![Screenshot 1](https://photos.fife.usercontent.google.com/pw/AP1GczMp0KGhnZFnC6_QBIZyrB0nZckBQBy2Jlrl_3jb53fEpOU0ATtvqzDVyw=w1715-h879-s-no-gm?authuser=0)
+![ats_1](https://github.com/Parthiban-R-3997/Smart-ATS-System-Using-Google-Gemini/assets/26496805/eed50921-ef63-4158-9905-03bbf202d72e)
 
 
 
