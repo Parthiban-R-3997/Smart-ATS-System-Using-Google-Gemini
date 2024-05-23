@@ -3,5 +3,5 @@ PyPDF2
 google.generativeai
 python-dotenv
 langchain-groq
-PyMuPDF
-fitz
+python-docx
+docx
