@@ -4,6 +4,7 @@ import os
 from PyPDF2 import PdfReader
 import google.generativeai as genai
 from dotenv import load_dotenv
+import docx
 
 # Loading the .env keys
 load_dotenv()
@@ -22,38 +23,38 @@ def get_pdf_text(pdf_docs):
             for page in pdf_reader.pages:
                 text += page.extract_text()
         elif doc.name.endswith(".docx"):
-            try:
-                import docx
-                doc_reader = docx.Document(doc)
-                for para in doc_reader.paragraphs:
-                    text += para.text + "\n"
-            except ImportError:
-                st.error("Please make sure you have installed the `python-docx` package.")
+            doc_reader = docx.Document(doc)
+            for para in doc_reader.paragraphs:
+                text += para.text + "\n"        
     return text
 
 # Define input prompts
 input_prompts = {
     "evaluate_resume": """
-        You are an experienced Technical Human Resource Manager,your task is to review the provided resume against the job description. 
+        You are an experienced Technical Human Resource Manager. Your task is to review the provided resume against the job description. 
         Please share your professional evaluation on whether the candidate's profile aligns with the role. 
         Highlight the strengths and weaknesses of the applicant in relation to the specified job requirements.
+
     """,
     "improve_skills": """
-        You are an Technical Human Resource Manager with expertise in data science, 
-        your role is to scrutinize the resume in light of the job description provided. 
+        You are a Technical Human Resource Manager with expertise in all domains. 
+        Your role is to scrutinize the resume in light of the job description provided. 
         Share your insights on the candidate's suitability for the role from an HR perspective. 
         Additionally, offer advice on enhancing the candidate's skills and identify areas where improvement is needed.
+
     """,
     "missing_keywords": """
-        You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of data science and ATS functionality, 
-        your task is to evaluate the resume against the provided job description. As a Human Resource manager,
-        assess the compatibility of the resume with the role. Give me what are the keywords that are missing
-        Also, provide recommendations for enhancing the candidate's skills and identify which areas require further development.
+        You are a skilled ATS (Applicant Tracking System) scanner with a deep understanding of ATS functionality across various domains. 
+        Your task is to evaluate the resume against the provided job description. As a Human Resource Manager,
+        assess the compatibility of the resume with the role. Identify the keywords that are missing.
+        Also, provide recommendations for enhancing the candidate's skills and indicate which areas require further development.
+
     """,
     "percentage_match": """
-        You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of data science and ATS functionality, 
-        your task is to evaluate the resume against the provided job description. give me the percentage of match if the resume matches
-        the job description. First the output should come as percentage and then keywords missing and last final thoughts.
+        You are a skilled ATS (Applicant Tracking System) scanner with a deep understanding of ATS functionality across various domains. 
+        Your task is to evaluate the resume against the provided job description. Give the percentage of match if the resume matches
+        the job description. First, present the percentage match, then list the missing keywords, and finally provide your overall thoughts.
+
     """,
     "answer_query": """
         You are an experienced Technical Human Resource Manager. Please answer the following query based on the resume and job description provided.
