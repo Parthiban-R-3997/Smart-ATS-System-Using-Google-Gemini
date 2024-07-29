@@ -63,15 +63,12 @@ input_prompts = {
 
 # Define model options
 model_options = [
-    "models/gemini-1.0-pro",
-    "models/gemini-1.0-pro-001",
-    "models/gemini-1.0-pro-latest",
-    "models/gemini-1.0-pro-vision-latest",
-    "models/gemini-1.5-flash-latest",
-    "models/gemini-1.5-pro-latest",
-    "models/gemini-pro",
-    "models/gemini-pro-vision"
+    "gemini-1.5-flash",
+    "gemini-1.5-pro",
+    "gemini-1.0-pro",
+    "gemini-pro"
 ]
+
 
 # Streamlit App
 st.set_page_config(page_title="Resume Expert System", page_icon=":chart_with_upwards_trend:")
